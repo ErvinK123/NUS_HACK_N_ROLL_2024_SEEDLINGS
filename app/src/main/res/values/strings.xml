@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">OmniPersona</string>
-    <string name="welcome_message">Hello there</string>
+    <string name="start">START TEST</string>
 </resources>
