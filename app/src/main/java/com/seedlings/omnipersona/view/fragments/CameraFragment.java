@@ -172,7 +172,7 @@ public class CameraFragment extends Fragment {
 
         viewModel = new ViewModelProvider(getActivity()).get(ApplicationViewModel.class);
 
-//        imageView = view.findViewById(R.id.testImage);
+        imageView = view.findViewById(R.id.testImage);
 
         initTextureView();
         initRegisterButton();
