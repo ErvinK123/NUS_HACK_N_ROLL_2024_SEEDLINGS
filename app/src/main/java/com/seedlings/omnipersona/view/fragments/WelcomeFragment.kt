@@ -37,9 +37,10 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initStartTestButton()
+
         if (checkPermission()) {
             // Permission is already granted, perform your actions here
-            initStartTestButton()
         } else {
             // Permission is not granted, request it
             requestPermission()

@@ -7,6 +7,8 @@ android {
     namespace = "com.seedlings.omnipersona"
     compileSdk = 33
 
+
+
     defaultConfig {
         applicationId = "com.seedlings.omnipersona"
         minSdk = 23
@@ -18,6 +20,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        setProperty("archivesBaseName", "Omnipersona")
     }
 
     buildTypes {
