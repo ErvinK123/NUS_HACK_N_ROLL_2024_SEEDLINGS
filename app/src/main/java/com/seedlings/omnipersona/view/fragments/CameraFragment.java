@@ -99,9 +99,8 @@ public class CameraFragment extends Fragment {
 
             Bitmap myBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
             imageView.setImageBitmap(myBitmap);
-
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayout, new CameraResultFragment())
+                    .replace(R.id.frameLayout, new CameraResultFragment(myBitmap))
                     .commit();
 
         }
@@ -206,7 +205,7 @@ public class CameraFragment extends Fragment {
     }
 
     private void initRegisterButton() {
-        recogniseButton = requireView().findViewById(R.id.photoNext);
+        recogniseButton = requireView().findViewById(R.id.takePhoto);
         recogniseButton.setOnClickListener(view -> {
             SparseIntArray orientations = new SparseIntArray(4);
             orientations.append(Surface.ROTATION_0, 0);

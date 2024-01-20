@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <TextView
+    <Button
         android:id="@+id/retake"
-        android:layout_width="134dp"
-        android:layout_height="55dp"
+        android:layout_width="110dp"
+        android:layout_height="46dp"
         android:background="@drawable/round_corner_button"
         android:backgroundTint="@color/black"
         android:gravity="center"
         android:text="Retake"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
