@@ -14,6 +14,7 @@
     <string name="free_spirit_desc">The path less travelled. Independent, unconventional, and resistant to conformity.</string>
     <string name="athlete_desc">Disciplined, competitive, and driven to excel in physical activities. Enjoys challenges and values teamwork.</string>
     <string name="sage_desc">Wise, contemplative, and possesses a deep understanding of life complexities. Seeks knowledge for profound insights and is often consulted for guidance.</string>
+    <string name="app_description">Multi-Modal \n Google Machine Learning Kit \nPersonality Test</string>
 
     <string name="no_camera_permission">Camera Permission not enabled, certain features may not be available</string>
 </resources>
