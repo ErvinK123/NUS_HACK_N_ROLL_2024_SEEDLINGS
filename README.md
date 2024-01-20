@@ -29,7 +29,7 @@ To set up the project in Android Studio:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository/OmniPersona.git
+   git clone https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS.git
    ```
 2. Open Android Studio and select 'Open an Existing Project'.
 3. Navigate to the cloned repository and open it.
