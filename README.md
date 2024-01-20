@@ -57,9 +57,9 @@ Frequently asked questions will be added as they arise.
   <h3>Backend</h3>
   <p>
     <a>
-      <img src="https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white"/>
+      <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/27321883-2acf-4956-b788-eb972a162c13"/>
     </a>
-    	
+
   </p>
   <br />
 </div>
