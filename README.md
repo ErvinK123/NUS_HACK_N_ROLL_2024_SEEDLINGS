@@ -40,11 +40,10 @@ To set up the project in Android Studio:
 - **Engaging Personality Test:** Unique questions that reveal users' personality types. <br/>
 - **Multisensory Experience:** Integration of audio and visual elements to enhance user interaction.
 - **Dynamic Result Mapping:** Innovative scoring system categorizing users into distinct personality types.
-- **User Authentication:** Secure registration and login, implemented with Android's security best practices.
 - **Interactive UI/UX:** A responsive and intuitive interface tailored for a seamless Android experience.
 
 <h2 align="center" id = "faq" > :question: FAQ</h2>
-Frequently asked questions will be added as they arise.
+*Frequently asked questions will be added as they arise.*
 
 <h2 align="center" id = "tech-stack"> 🛠 Tech Stack:</h2>
 <div align="center">
@@ -54,13 +53,12 @@ Frequently asked questions will be added as they arise.
       <img src="https://skillicons.dev/icons?i=androidstudio,java,kotlin" />
     </a>
   </p>
-  <h3>Backend</h3>
-  <p>
-    <a>
-      <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/27321883-2acf-4956-b788-eb972a162c13"/>
-    </a>
-
-  </p>
+<h3>Backend</h3>
+<p>
+  <a>
+    <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/27321883-2acf-4956-b788-eb972a162c13" width="100" height="100"/>
+  </a>
+</p>
   <br />
 </div>
 
