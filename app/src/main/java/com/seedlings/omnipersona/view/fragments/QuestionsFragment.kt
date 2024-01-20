@@ -23,7 +23,6 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
     private var dataArray: List<String>? = null
     private var selectedOptionScore: String? = null // this is a 6 digit string
 
-    var payload: String =  "Question@123456@Option1@123456@Option2@123456@Option3@123456@Option4"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -31,15 +30,18 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // HTTP request to endpoint
+        var payload: String =  viewModel.getQuestion(questionCounter)
+        System.out.println(questionCounter)
+        System.out.println(payload.isEmpty())
         this.dataArray = payload.split("@")
 
-        VolleyUtil.getQuestion(questionCounter, {
-            payload = it
-            this.dataArray = payload.split("@")
-            initButtonOne(dataArray)
-            initButtonTwo(dataArray)
-            initButtonThree(dataArray)
-            initButtonFour(dataArray)},{})
+//        VolleyUtil.getQuestion(questionCounter, {
+//            payload = it
+//            this.dataArray = payload.split("@")
+//            initButtonOne(dataArray)
+//            initButtonTwo(dataArray)
+//            initButtonThree(dataArray)
+//            initButtonFour(dataArray)},{})
 
         // populate texts of qn and buttons
         var questionText = requireView().findViewById<TextView>(R.id.question)

@@ -3,26 +3,52 @@ package com.seedlings.omnipersona.view.fragments
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import androidx.fragment.app.viewModels
+import com.android.volley.toolbox.Volley
 import com.seedlings.omnipersona.R
+import com.seedlings.omnipersona.storage.ApplicationViewModel
+import com.seedlings.omnipersona.utils.VolleyUtil
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
+    private val viewModel : ApplicationViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        VolleyUtil.getQuestion(1, {viewModel.questionOnePayload = it
+                                  System.out.println("FUNCTION RETURNED")}, {System.out.println("API ERROR")} )
+        VolleyUtil.getQuestion(2, {viewModel.questionTwoPayload = it
+            System.out.println("FUNCTION RETURNED")}, {System.out.println("API ERROR")})
+        VolleyUtil.getQuestion(3, {viewModel.questionThreePayload = it
+                System.out.println("FUNCTION RETURNED")}, {System.out.println("API ERROR")})
+
         if (checkPermission()) {
             // Permission is already granted, perform your actions here
+            while (isViewModelEmpty()) {
+                Thread.sleep(1000L)
+            }
             initStartTestButton()
         } else {
             // Permission is not granted, request it
@@ -30,6 +56,10 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             Toast.makeText(requireContext(), R.string.no_camera_permission, Toast.LENGTH_SHORT).show()
         }
 
+    }
+
+    private fun isViewModelEmpty(): Boolean {
+        return viewModel.getQuestion(1).isEmpty() || viewModel.getQuestion(2).isEmpty() || viewModel.getQuestion(3).isEmpty()
     }
 
     private fun checkPermission(): Boolean {
