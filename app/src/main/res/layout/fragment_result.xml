@@ -60,9 +60,10 @@
         android:id="@+id/resultImage"
         android:layout_width="262dp"
         android:layout_height="267dp"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="201dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

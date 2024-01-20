@@ -143,6 +143,7 @@ public class CameraFragment extends Fragment {
 //                        public void onFailure(@NonNull Exception e) {
 //                            // Task failed with an exception
 //                            // ...
+//                            System.out.println("SOMETHINGWENTWONG");
 //                            Toast.makeText(requireContext(), "ON FAILURE", Toast.LENGTH_SHORT).show();
 //                        }
 //                    });
