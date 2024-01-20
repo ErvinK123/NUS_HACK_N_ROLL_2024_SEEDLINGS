@@ -28,7 +28,7 @@
         android:layout_width="282dp"
         android:layout_height="96dp"
         android:background="@drawable/round_corner_button"
-        android:backgroundTint="#f7d8ba"
+        android:backgroundTint="@color/header"
         android:gravity="center"
         android:text="Result"
         android:textColor="@color/black"

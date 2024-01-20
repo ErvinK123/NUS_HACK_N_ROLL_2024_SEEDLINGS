@@ -5,6 +5,7 @@
     <string name="take_photo">Take Photo</string>
 
     <string name="loading">...</string>
+    <string name="next">Next</string>
 
     <string name="no_camera_permission">Camera Permission not enabled, certain features may not be available</string>
 </resources>

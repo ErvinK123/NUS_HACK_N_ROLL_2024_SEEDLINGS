@@ -15,6 +15,7 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initRetakeButton()
     }
 
     override fun onStart() {
@@ -32,7 +33,6 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
             System.out.println("I am retaking the quiz")
             parentFragmentManager.commit {
                 replace(R.id.frameLayout, WelcomeFragment())
-                addToBackStack(null)
             }
         }
     }
