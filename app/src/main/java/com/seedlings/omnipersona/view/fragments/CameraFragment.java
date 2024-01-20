@@ -1,8 +1,6 @@
 package com.seedlings.omnipersona.view.fragments;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -43,7 +41,6 @@ import com.seedlings.omnipersona.storage.ApplicationViewModel;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-import java.util.List;
 
 public class CameraFragment extends Fragment {
 
@@ -102,6 +99,10 @@ public class CameraFragment extends Fragment {
 
             Bitmap myBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
             imageView.setImageBitmap(myBitmap);
+
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.frameLayout, new CameraResultFragment())
+                    .commit();
 
         }
     };
@@ -205,7 +206,7 @@ public class CameraFragment extends Fragment {
     }
 
     private void initRegisterButton() {
-        recogniseButton = requireView().findViewById(R.id.localRecogniseButton);
+        recogniseButton = requireView().findViewById(R.id.photoNext);
         recogniseButton.setOnClickListener(view -> {
             SparseIntArray orientations = new SparseIntArray(4);
             orientations.append(Surface.ROTATION_0, 0);

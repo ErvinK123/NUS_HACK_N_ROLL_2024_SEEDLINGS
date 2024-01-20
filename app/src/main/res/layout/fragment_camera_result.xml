@@ -7,7 +7,7 @@
     android:background="@color/background">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/localRecogniseButton"
+        android:id="@+id/photoNext"
         android:layout_width="145dp"
         android:layout_height="60dp"
         android:layout_marginBottom="64dp"
@@ -45,7 +45,7 @@
         android:id="@+id/testImage"
         android:layout_width="375dp"
         android:layout_height="318dp"
-        app:layout_constraintBottom_toTopOf="@+id/localRecogniseButton"
+        app:layout_constraintBottom_toTopOf="@+id/photoNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
