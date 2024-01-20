@@ -37,11 +37,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.mlkit.vision.common.InputImage;
+import com.google.mlkit.vision.label.ImageLabel;
+import com.google.mlkit.vision.label.ImageLabeler;
+import com.google.mlkit.vision.label.ImageLabeling;
+import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.seedlings.omnipersona.R;
 import com.seedlings.omnipersona.storage.ApplicationViewModel;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.List;
 
 public class CameraFragment extends Fragment {
 
@@ -103,9 +111,37 @@ public class CameraFragment extends Fragment {
             Matrix matrix = new Matrix();
             matrix.postRotate(90); // Rotate by 90 degrees clockwise
 
-// Create a new rotated Bitmap
+            // Create a new rotated Bitmap
             Bitmap rotatedBitmap = Bitmap.createBitmap(myBitmap, 0, 0, myBitmap.getWidth(), myBitmap.getHeight(), matrix, true);
             imageView.setImageBitmap(rotatedBitmap);
+
+            InputImage inputImage = InputImage.fromBitmap(rotatedBitmap, 0);
+            ImageLabeler labeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
+
+            labeler.process(inputImage)
+                    .addOnSuccessListener(new OnSuccessListener<List<ImageLabel>>() {
+                        @Override
+                        public void onSuccess(List<ImageLabel> labels) {
+                            // Task completed successfully
+                            // ...
+                            Toast.makeText(requireContext(), "DONE CORRECTLY", Toast.LENGTH_SHORT).show();
+                            for (ImageLabel label : labels) {
+                                String text = label.getText();
+                                float confidence = label.getConfidence();
+                                int index = label.getIndex();
+                                System.out.println("FOUND ITEM" + text + confidence + index);
+                            }
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Task failed with an exception
+                            // ...
+                            Toast.makeText(requireContext(), "ON FAILURE", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
             getParentFragmentManager().beginTransaction()
                     .replace(R.id.frameLayout, new CameraResultFragment(rotatedBitmap))
                     .commit();
