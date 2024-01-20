@@ -43,33 +43,43 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
         initNextButton()
     }
 
+    private fun setButtonChosenColor(button: Button) {
+        val buttons = listOf(
+            requireView().findViewById<Button>(R.id.option_one),
+            requireView().findViewById<Button>(R.id.option_two),
+            requireView().findViewById<Button>(R.id.option_three),
+            requireView().findViewById<Button>(R.id.option_four)
+        )
+
+        val whiteColorList = ContextCompat.getColorStateList(requireContext(), R.color.white)
+        val blackColor = ContextCompat.getColor(requireContext(), R.color.black)
+        val blueColorList = ContextCompat.getColorStateList(requireContext(), R.color.blue)
+
+        buttons.forEach {
+            it.setTextColor(blackColor)
+            it.backgroundTintList = whiteColorList
+        }
+
+        button.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+        button.backgroundTintList = blueColorList
+    }
+
+
     fun initButtonOne(dataArray: List<String>?) {
         var buttonOne = requireView().findViewById<Button>(R.id.option_one)
         buttonOne.setText(dataArray?.get(2))
         buttonOne.setOnClickListener {
-            setButtonTextColor(buttonOne, R.color.teal_select)
+            setButtonChosenColor(buttonOne)
             selectedOptionScore = dataArray?.get(1)
             System.out.println(selectedOptionScore)
         }
     }
 
-    private fun setButtonTextColor(button: Button, color: Int) {
-        val buttonOne = requireView().findViewById<Button>(R.id.option_one)
-        val buttonTwo = requireView().findViewById<Button>(R.id.option_two)
-        val buttonThree = requireView().findViewById<Button>(R.id.option_three)
-        val buttonFour = requireView().findViewById<Button>(R.id.option_four)
-        buttonOne.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
-        buttonTwo.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
-        buttonThree.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
-        buttonFour.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
-        button.setTextColor(ContextCompat.getColor(requireContext(), color))
-    }
-
-        fun initButtonTwo(dataArray: List<String>?) {
+    fun initButtonTwo(dataArray: List<String>?) {
         var buttonTwo = requireView().findViewById<Button>(R.id.option_two)
         buttonTwo.setText(dataArray?.get(4))
         buttonTwo.setOnClickListener {
-            setButtonTextColor(buttonTwo, R.color.teal_select)
+            setButtonChosenColor(buttonTwo)
             selectedOptionScore = dataArray?.get(3)
         }
     }
@@ -77,7 +87,7 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
         var buttonThree = requireView().findViewById<Button>(R.id.option_three)
         buttonThree.setText(dataArray?.get(6))
         buttonThree.setOnClickListener {
-            setButtonTextColor(buttonThree, R.color.teal_select)
+            setButtonChosenColor(buttonThree)
             selectedOptionScore = dataArray?.get(5)
         }
     }
@@ -85,7 +95,7 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
         var buttonFour = requireView().findViewById<Button>(R.id.option_four)
         buttonFour.setText(dataArray?.get(8))
         buttonFour.setOnClickListener {
-            setButtonTextColor(buttonFour, R.color.teal_select)
+            setButtonChosenColor(buttonFour)
             selectedOptionScore = dataArray?.get(7)
         }
     }
