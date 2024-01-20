@@ -10,7 +10,7 @@ import androidx.fragment.app.commit
 import com.google.android.material.color.utilities.Score
 import com.seedlings.omnipersona.R
 
-class CameraResultFragment(private val curScore: MutableList<Int>, private val bitmap: Bitmap): Fragment(R.layout.fragment_camera_result){
+class CameraResultFragment(private val curScore: MutableList<Int>, private val bitmap: Bitmap, private val picList: List<String>): Fragment(R.layout.fragment_camera_result){
 
     private lateinit var imageView: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {

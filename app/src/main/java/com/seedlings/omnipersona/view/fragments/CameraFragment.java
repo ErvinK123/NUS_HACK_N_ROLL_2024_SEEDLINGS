@@ -48,6 +48,7 @@ import com.seedlings.omnipersona.R;
 import com.seedlings.omnipersona.storage.ApplicationViewModel;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -100,7 +101,6 @@ public class CameraFragment extends Fragment {
     //UI
     private AppCompatButton recogniseButton;
     private TextureView textureView;
-    private ImageView imageView;
     // Listeners and callbacks
     private final ImageReader.OnImageAvailableListener onImageAvailableListener = new ImageReader.OnImageAvailableListener() {
         @Override
@@ -118,7 +118,6 @@ public class CameraFragment extends Fragment {
 
             // Create a new rotated Bitmap
             Bitmap rotatedBitmap = Bitmap.createBitmap(myBitmap, 0, 0, myBitmap.getWidth(), myBitmap.getHeight(), matrix, true);
-            imageView.setImageBitmap(rotatedBitmap);
 
             InputImage inputImage = InputImage.fromBitmap(rotatedBitmap, 0);
             ImageLabeler labeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
@@ -129,15 +128,14 @@ public class CameraFragment extends Fragment {
                         public void onSuccess(List<ImageLabel> labels) {
                             // Task completed successfully
                             // ...
-                            Toast.makeText(requireContext(), "DONE CORRECTLY", Toast.LENGTH_SHORT).show();
+                            List<String> picList = new ArrayList<>();
                             for (ImageLabel label : labels) {
                                 String text = label.getText();
-                                float confidence = label.getConfidence();
-                                int index = label.getIndex();
-                                System.out.println("FOUND ITEM" + text + confidence + index);
+                                picList.add(text);
+                                System.out.println("FOUND ITEM" + text);
                             }
                             getParentFragmentManager().beginTransaction()
-                                    .replace(R.id.frameLayout, new CameraResultFragment(curScore, rotatedBitmap))
+                                    .replace(R.id.frameLayout, new CameraResultFragment(curScore, rotatedBitmap, picList))
                                     .commit();
                         }
                     })
@@ -146,7 +144,7 @@ public class CameraFragment extends Fragment {
                         public void onFailure(@NonNull Exception e) {
                             // Task failed with an exception
                             // ...
-                            System.out.println("SOMETHINGWENTWONG");
+                            System.out.println("ML model failed with exception");
                             Toast.makeText(requireContext(), "ON FAILURE", Toast.LENGTH_SHORT).show();
                         }
                     });
@@ -220,7 +218,6 @@ public class CameraFragment extends Fragment {
 
         viewModel = new ViewModelProvider(getActivity()).get(ApplicationViewModel.class);
 
-        imageView = view.findViewById(R.id.testImage);
 
         initTextureView();
         initRegisterButton();
