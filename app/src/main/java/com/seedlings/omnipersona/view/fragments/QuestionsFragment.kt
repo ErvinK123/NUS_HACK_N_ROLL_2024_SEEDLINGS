@@ -4,6 +4,7 @@ package com.seedlings.omnipersona.view.fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -48,6 +49,8 @@ class QuestionsFragment(val scores: MutableList<Int>, val counter: Int) : Fragme
             initButtonFour(dataArray)
             initNextButton()},{})
 
+        val determinateBar = view.findViewById<ProgressBar>(R.id.determinateBar)
+        determinateBar.progress = questionCounter * 10
 
     }
 
