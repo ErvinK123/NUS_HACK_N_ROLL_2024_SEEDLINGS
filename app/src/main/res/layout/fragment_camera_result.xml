@@ -6,49 +6,67 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <TextView
-        android:id="@+id/camera_result"
-        android:layout_width="219dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="162dp"
-        android:layout_marginEnd="192dp"
-        android:background="@drawable/round_corner_button"
-        android:backgroundTint="@color/header"
-        android:gravity="center"
-        android:text="Photo captured"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072" />
-
-    <ImageView
-        android:id="@+id/testImage"
-        android:layout_width="375dp"
-        android:layout_height="318dp"
-        android:layout_marginTop="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/camera_result"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <Button
-        android:id="@+id/photoNext"
-        android:layout_width="103dp"
-        android:layout_height="57dp"
-        android:background="@drawable/round_corner_button"
-        android:backgroundTint="@color/black"
-        android:text="@string/next"
-        android:textColor="@color/white"
-        android:textSize="14sp"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/camera_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="48dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/round_corner_button"
+            android:backgroundTint="@color/header"
+            android:gravity="center"
+            android:text="Photo captured"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <ImageView
+            android:id="@+id/testImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="36dp"
+            android:layout_weight="0.6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:layout_editor_absoluteY="995dp" />
+
+        <Button
+            android:id="@+id/photoNext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="128dp"
+            android:layout_marginBottom="48dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/round_corner_button"
+            android:backgroundTint="@color/black"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.865" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
