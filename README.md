@@ -43,7 +43,7 @@ To set up the project in Android Studio:
 - **Interactive UI/UX:** A responsive and intuitive interface tailored for a seamless Android experience.
 
 <h2 align="center" id = "faq" > :question: FAQ</h2>
-_Frequently asked questions will be added as they arise._
+*Frequently asked questions will be added as they arise*.
 
 <h2 align="center" id = "tech-stack"> 🛠 Tech Stack:</h2>
 <div align="center">
