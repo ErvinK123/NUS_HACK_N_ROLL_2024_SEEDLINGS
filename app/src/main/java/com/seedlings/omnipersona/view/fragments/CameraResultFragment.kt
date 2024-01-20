@@ -42,7 +42,7 @@ class CameraResultFragment(private val curScore: MutableList<Int>, private val b
         val personalities = mapOf(
             0 to listOf(
                 "Bonfire", "Tractor", "Aquarium", "Circus", "Infrastructure", "Ferris wheel",
-                "Comet", "Mortarboard", "Track", "Christmas", "Rocket", "Rein", "Skiing", "Submarine"
+                "Comet", "Mortarboard", "Track", "Christmas", "Rocket", "Rein", "Skiing", "Submarine", "Pattern"
             ),
             1 to listOf(
                 "Park", "Graduation", "Bridge", "Sitting", "Cushion", "Sunset", "Prom", "Reef",
@@ -71,7 +71,6 @@ class CameraResultFragment(private val curScore: MutableList<Int>, private val b
 
         for (item in picList) {
             for ((personality, labels) in personalities) {
-                println(item)
                 if (labels.contains(item)) {
                     curScore[personality] += 1
                 }

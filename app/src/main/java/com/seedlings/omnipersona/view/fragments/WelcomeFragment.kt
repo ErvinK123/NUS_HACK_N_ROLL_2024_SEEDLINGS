@@ -101,7 +101,6 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
     fun initStartTestButton() {
         requireView().findViewById<Button>(R.id.start_button).setOnClickListener {
             // Transition to next page code
-            System.out.println("I PRESSED START TEST")
             parentFragmentManager.commit {
                 replace(R.id.frameLayout, QuestionsFragment(listOf(0, 0, 0, 0, 0, 0).toMutableList(),1))
             }
