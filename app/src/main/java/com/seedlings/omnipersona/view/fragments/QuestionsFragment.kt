@@ -123,11 +123,9 @@ class QuestionsFragment(val scores: MutableList<Int>, val counter: Int) : Fragme
                 if (questionCounter > 2) {
                     System.out.println("I CHANGED TO CAMERA ")
                     replace(R.id.frameLayout, CameraFragment())
-                    addToBackStack(null)
                     return@commit
                 }
                 replace(R.id.frameLayout, QuestionsFragment(curScore, questionCounter + 1))
-                addToBackStack(null)
             }
         }
     }

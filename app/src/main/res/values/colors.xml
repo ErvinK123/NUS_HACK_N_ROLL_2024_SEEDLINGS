@@ -10,4 +10,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#FEF8DD</color>
     <color name="blue">#ACDDDE</color>
+    <color name="header">#F7D8BA</color>
 </resources>

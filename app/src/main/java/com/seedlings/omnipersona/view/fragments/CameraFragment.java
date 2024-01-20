@@ -103,6 +103,7 @@ public class CameraFragment extends Fragment {
             Bitmap myBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
             imageView.setImageBitmap(myBitmap);
 
+
         }
     };
     // Runnables and handlers
@@ -283,7 +284,7 @@ public class CameraFragment extends Fragment {
             texture.setDefaultBufferSize(textureView.getHeight(), textureView.getWidth());
 
             // Init image reader
-            imageReader = ImageReader.newInstance(textureView.getWidth(), textureView.getHeight(), ImageFormat.JPEG, 1);
+            imageReader = ImageReader.newInstance(textureView.getWidth(), textureView.getHeight(), ImageFormat.JPEG, 5);
             imageReader.setOnImageAvailableListener(onImageAvailableListener, handler);
 
             Surface surface = new Surface(texture);
