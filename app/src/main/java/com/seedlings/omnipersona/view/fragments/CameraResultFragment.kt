@@ -72,7 +72,7 @@ class CameraResultFragment(private val curScore: MutableList<Int>, private val b
         for (item in picList) {
             for ((personality, labels) in personalities) {
                 if (labels.contains(item)) {
-                    curScore[personality] += 1
+                    curScore[personality] += 5
                 }
             }
         }
