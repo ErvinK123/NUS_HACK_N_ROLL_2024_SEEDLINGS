@@ -11,12 +11,6 @@ class ApplicationViewModel(application: Application) : AndroidViewModel(applicat
 
     private var scores: MutableList<Int> = listOf(0, 0, 0, 0, 0, 0).toMutableList()
 
-    fun getPersonality(scores: List<Int>): String {
-        val table = arrayOf("The Trailblazer", "The Peacemaker", "The Analyst", "The Free Spirit", "The Athlete", "The Sage")
-        val maxIndex = scores.indexOf(scores.maxOrNull())
-        return table[maxIndex]
-    }
-
     // Method to update the list data
     fun getQuestion(question:Int): String {
         if (question == 1) {

@@ -42,8 +42,14 @@ import com.seedlings.omnipersona.storage.ApplicationViewModel;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.List;
 
 public class CameraFragment extends Fragment {
+    private List<Integer> curScore;
+
+    public CameraFragment(List<Integer> curScore) {
+        this.curScore = curScore;
+    }
 
     // MISC Fields
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -107,7 +113,7 @@ public class CameraFragment extends Fragment {
             Bitmap rotatedBitmap = Bitmap.createBitmap(myBitmap, 0, 0, myBitmap.getWidth(), myBitmap.getHeight(), matrix, true);
             imageView.setImageBitmap(rotatedBitmap);
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayout, new CameraResultFragment(rotatedBitmap))
+                    .replace(R.id.frameLayout, new CameraResultFragment(curScore, rotatedBitmap))
                     .commit();
 
         }

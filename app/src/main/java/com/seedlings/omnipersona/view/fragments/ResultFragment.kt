@@ -5,9 +5,10 @@ import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import com.google.android.material.color.utilities.Score
 import com.seedlings.omnipersona.R
 
-class ResultFragment : Fragment(R.layout.fragment_result) {
+class ResultFragment(private val curScore: MutableList<Int>) : Fragment(R.layout.fragment_result) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,12 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
                 replace(R.id.frameLayout, WelcomeFragment())
             }
         }
+    }
+
+    fun getResult(): String {
+        val table = arrayOf("The Trailblazer", "The Peacemaker", "The Analyst", "The Free Spirit", "The Athlete", "The Sage")
+        val maxIndex = curScore.indexOf(curScore.maxOrNull())
+        return table[maxIndex]
     }
 
 }
