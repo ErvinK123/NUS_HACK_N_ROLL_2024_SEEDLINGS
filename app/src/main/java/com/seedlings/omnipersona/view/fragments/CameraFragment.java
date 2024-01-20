@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
+import android.graphics.Matrix;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
@@ -98,9 +99,15 @@ public class CameraFragment extends Fragment {
             buffer.get(bytes);
 
             Bitmap myBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
-            imageView.setImageBitmap(myBitmap);
+
+            Matrix matrix = new Matrix();
+            matrix.postRotate(90); // Rotate by 90 degrees clockwise
+
+// Create a new rotated Bitmap
+            Bitmap rotatedBitmap = Bitmap.createBitmap(myBitmap, 0, 0, myBitmap.getWidth(), myBitmap.getHeight(), matrix, true);
+            imageView.setImageBitmap(rotatedBitmap);
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayout, new CameraResultFragment(myBitmap))
+                    .replace(R.id.frameLayout, new CameraResultFragment(rotatedBitmap))
                     .commit();
 
         }

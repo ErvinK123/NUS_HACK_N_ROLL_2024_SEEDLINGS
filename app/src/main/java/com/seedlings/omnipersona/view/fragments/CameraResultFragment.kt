@@ -13,7 +13,6 @@ class CameraResultFragment(private val bitmap: Bitmap): Fragment(R.layout.fragme
 
     private lateinit var imageView: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
-        System.out.println("CAMEERARESULTONCEREAR")
         super.onCreate(savedInstanceState)
     }
 
