@@ -7,16 +7,14 @@ import androidx.lifecycle.MutableLiveData
 
 class ApplicationViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val scores = MutableLiveData<ArrayList<Int>>()
-
-    // Expose LiveData to the observers
-    fun getScores(): MutableLiveData<ArrayList<Int>> {
-        return scores
-    }
+    private var scores: List<Int> = ArrayList<Int>()
 
     // Method to update the list data
-    fun updateScores(newData: ArrayList<Int>) {
-        scores.value = newData
+    fun updateScores(scoresToAdd: List<Int>) {
+        var i = 0
+        scores.toMutableList().apply {
+            this[0] = scores[0] + scoresToAdd[i++]
+        }
     }
 
 }

@@ -20,6 +20,19 @@ object VolleyUtil {
         this.viewModel = viewModel
     }
 
+    fun getQuestion(question:Int,
+                    onSuccessListener: (String) -> Unit,
+                    onErrorListener: () -> Unit) {
+        val newUrl = "$appscriptApi?question=$question"
+        addToStringQueue(
+            Request.Method.GET,
+            newUrl,
+            onSuccessListener,
+            onErrorListener,
+            null
+        )
+    }
+
     fun getQuestionOne(onSuccessListener: (String) -> Unit,
                        onErrorListener: () -> Unit) {
         val newUrl = "$appscriptApi?question=1"
