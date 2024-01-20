@@ -37,10 +37,12 @@ To set up the project in Android Studio:
 
 <h2 align="center" id = "key-features"> :old_key: Key Features</h2>
 
-- **Engaging Personality Test:** Unique questions that reveal users' personality types. <br/>
-- **Multisensory Experience:** Integration of audio and visual elements to enhance user interaction.
-- **Dynamic Result Mapping:** Innovative scoring system categorizing users into distinct personality types.
-- **Interactive UI/UX:** A responsive and intuitive interface tailored for a seamless Android experience.
+- **Engaging Personality Test:** Unique questions designed to uncover users' personality types.
+- **Multisensory Experience:** A rich blend of audio and visual elements that deeply engages users.
+- **Dynamic Result Mapping:** An innovative scoring system that categorizes users into distinct personality types based on their responses.
+- **Interactive UI/UX:** A responsive and intuitive interface optimized for a seamless Android experience.
+- **Photo Analysis Enhancement:** Leveraging Google's ML Kit, the app allows users to take photos, which are then analyzed to provide deeper insights into their personality. This feature not only adds an interactive layer to the experience but also utilizes advanced machine learning techniques to refine personality categorization based on visual cues.
+
 
 <h2 align="center" id = "faq" > :question: FAQ</h2>
 *Frequently asked questions will be added as they arise*.
