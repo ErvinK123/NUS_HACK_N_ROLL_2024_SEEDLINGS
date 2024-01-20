@@ -12,7 +12,7 @@ import com.seedlings.omnipersona.R
 import com.seedlings.omnipersona.storage.ApplicationViewModel
 
 
-class QuestionsFragment(private val counter: Int) : Fragment(R.layout.fragment_questions) {
+class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions) {
 
     private val questionCounter = counter
 
@@ -28,7 +28,7 @@ class QuestionsFragment(private val counter: Int) : Fragment(R.layout.fragment_q
         super.onViewCreated(view, savedInstanceState)
 
         // HTTP request to endpoint
-        val payload: String = "Question@123456@Option1@123456@Option2@123456@Option3@123456@Option4"
+        val payload: String = "Question@123456@abc@123456@def@123456@hij@123456@lmn"
         this.dataArray = payload.split("@")
 
         // populate texts of qn and buttons
@@ -42,6 +42,8 @@ class QuestionsFragment(private val counter: Int) : Fragment(R.layout.fragment_q
 
     fun initButtonOne(dataArray: List<String>?) {
         var buttonOne = requireView().findViewById<Button>(R.id.option_one)
+        System.out.println("INIT BUTTON 1 ")
+        System.out.println(dataArray?.get(2))
         buttonOne.setText(dataArray?.get(2))
         buttonOne.setOnClickListener {
         selectedOptionScore = dataArray?.get(1)
@@ -77,9 +79,12 @@ class QuestionsFragment(private val counter: Int) : Fragment(R.layout.fragment_q
 //        for (s in scoresToAdd) {
 //            s.toInt()
 //        }
-        parentFragmentManager.commit {
-            replace(R.id.frameLayout, QuestionsFragment(counter + 1))
-            addToBackStack(null)
+        var nextButton = requireView().findViewById<Button>(R.id.next)
+        nextButton.setOnClickListener{
+            parentFragmentManager.commit {
+                replace(R.id.frameLayout, QuestionsFragment(questionCounter + 1))
+                addToBackStack(null)
+            }
         }
     }
 
