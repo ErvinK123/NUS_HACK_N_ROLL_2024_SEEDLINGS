@@ -20,7 +20,7 @@ object VolleyUtil {
         this.viewModel = viewModel
     }
 
-    fun getQuestionOne(onSuccessListener: () -> Unit,
+    fun getQuestionOne(onSuccessListener: (String) -> Unit,
                        onErrorListener: () -> Unit) {
         val newUrl = "$appscriptApi?question=1"
         addToStringQueue(
@@ -32,7 +32,7 @@ object VolleyUtil {
         )
     }
 
-    fun getQuestionTwo(onSuccessListener: () -> Unit,
+    fun getQuestionTwo(onSuccessListener: (String) -> Unit,
                        onErrorListener: () -> Unit) {
         val newUrl = "$appscriptApi?question=2"
         addToStringQueue(
@@ -44,7 +44,7 @@ object VolleyUtil {
         )
     }
 
-    fun getQuestionThree(onSuccessListener: () -> Unit,
+    fun getQuestionThree(onSuccessListener: (String) -> Unit,
                        onErrorListener: () -> Unit) {
         val newUrl = "$appscriptApi?question=3"
         addToStringQueue(
@@ -59,7 +59,7 @@ object VolleyUtil {
     private fun addToStringQueue(
         method: Int,
         url: String,
-        onSuccessListener: () -> Unit,
+        onSuccessListener: (String) -> Unit,
         onErrorListener: (() -> Unit)? = null,
         body: ByteArray? = null,
     ) {
@@ -68,7 +68,7 @@ object VolleyUtil {
         val request = object : StringRequest(method, url,
             { res ->
                 System.out.println("addToStringQueue: $res")
-                onSuccessListener()
+                onSuccessListener(res)
             },
             { err ->
                 System.out.println("addToStringQueue: $err")
