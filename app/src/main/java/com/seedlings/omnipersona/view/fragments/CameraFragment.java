@@ -103,6 +103,7 @@ public class CameraFragment extends Fragment {
             Bitmap myBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
             imageView.setImageBitmap(myBitmap);
 
+
         }
     };
     // Runnables and handlers

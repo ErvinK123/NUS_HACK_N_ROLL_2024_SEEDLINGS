@@ -46,9 +46,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
         if (checkPermission()) {
             // Permission is already granted, perform your actions here
-            while (isViewModelEmpty()) {
-                Thread.sleep(1000L)
-            }
+
             initStartTestButton()
         } else {
             // Permission is not granted, request it
