@@ -120,7 +120,7 @@ class QuestionsFragment(val scores: MutableList<Int>, val counter: Int) : Fragme
             println("scores to add: $scoresToAdd")
             println("scores now: $curScore")
             parentFragmentManager.commit {
-                if (questionCounter > 2) {
+                if (questionCounter > 4) {
                     System.out.println("I CHANGED TO CAMERA ")
                     replace(R.id.frameLayout, CameraFragment(curScore))
                     return@commit
