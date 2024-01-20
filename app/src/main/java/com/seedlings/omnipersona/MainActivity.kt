@@ -3,6 +3,7 @@ package com.seedlings.omnipersona
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -20,17 +21,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         VolleyUtil.init(this, viewModel)
+        initWelcomeFragment()
 
         // Check if the permission is granted
         if (checkPermission()) {
             // Permission is already granted, perform your actions here
-            initWelcomeFragment()
         } else {
             // Permission is not granted, request it
             requestPermission()
+            Toast.makeText(applicationContext, R.string.no_camera_permission, Toast.LENGTH_SHORT).show()
         }
-
-        initWelcomeFragment()
     }
 
     private fun checkPermission(): Boolean {
