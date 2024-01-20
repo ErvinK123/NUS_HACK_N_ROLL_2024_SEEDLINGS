@@ -10,22 +10,16 @@ OmniPersona offers a unique, multisensory journey of self-discovery, going beyon
 
 <h2 align = "center"> :open_book: Table Of Contents </h2>
 
-- [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Key Features](#key-features)
 - [FAQ](#faq)
 - [Tech Stack](#tech-stack)
 - [Contributors](#contributors)
 
-<h2 align="center" id = "prerequisites"> :axe: Prerequisites</h2>
 
-Ensure you have the following installed:
-- Android Studio (latest version)
-- JDK (Java Development Kit)
+<h2 align="center" id = "setup"> :hammer_and_wrench: Installing and using OmniPersona</h2>
 
-<h2 align="center" id = "setup"> :hammer_and_wrench: Setup</h2>
-
-To set up the project in Android Studio:
+To start using OmniPersona:
 
 1. Download our release from our github repository here.
 2. Use either an Android Phone or an Android Tablet to download the apk and run the application.
