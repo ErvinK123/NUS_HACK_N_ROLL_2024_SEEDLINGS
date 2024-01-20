@@ -12,6 +12,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import com.seedlings.omnipersona.R
 import com.seedlings.omnipersona.storage.ApplicationViewModel
+import com.seedlings.omnipersona.utils.VolleyUtil
 
 
 class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions) {
@@ -22,16 +23,23 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
     private var dataArray: List<String>? = null
     private var selectedOptionScore: String? = null // this is a 6 digit string
 
+    var payload: String =  "Question@123456@Option1@123456@Option2@123456@Option3@123456@Option4"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // HTTP request to endpoint
-        val payload: String = "Question@123456@abc@123456@def@123456@hij@123456@lmn"
         this.dataArray = payload.split("@")
+
+        VolleyUtil.getQuestion(questionCounter, {
+            payload = it
+            this.dataArray = payload.split("@")
+            initButtonOne(dataArray)
+            initButtonTwo(dataArray)
+            initButtonThree(dataArray)
+            initButtonFour(dataArray)},{})
 
         // populate texts of qn and buttons
         var questionText = requireView().findViewById<TextView>(R.id.question)
