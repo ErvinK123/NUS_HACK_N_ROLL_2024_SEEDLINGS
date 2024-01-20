@@ -32,7 +32,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         requireView().findViewById<Button>(R.id.start_button).setOnClickListener {
             // Transition to next page code
             parentFragmentManager.commit {
-                replace(R.id.frameLayout, QuestionsFragment())
+                replace(R.id.frameLayout, QuestionsFragment(1))
                 addToBackStack(null)
             }
         }
