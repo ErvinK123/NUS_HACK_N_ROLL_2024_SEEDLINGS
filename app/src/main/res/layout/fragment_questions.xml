@@ -29,7 +29,7 @@
             android:background="@drawable/round_corner_button"
             android:backgroundTint="#f7d8ba"
             android:gravity="center"
-            android:text="Questions to be asked"
+            android:text="@string/loading"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/round_corner_button"
                 android:backgroundTint="@color/white"
-                android:text="Option 1"
+                android:text="@string/loading"
                 android:textColor="@color/black" />
 
             <Button
@@ -73,7 +73,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/round_corner_button"
                 android:backgroundTint="@color/white"
-                android:text="Option 2"
+                android:text="@string/loading"
                 android:textColor="@color/black" />
 
             <Button
@@ -86,7 +86,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/round_corner_button"
                 android:backgroundTint="@color/white"
-                android:text="Option 3"
+                android:text="@string/loading"
                 android:textColor="@color/black" />
 
             <Button
@@ -99,7 +99,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/round_corner_button"
                 android:backgroundTint="@color/white"
-                android:text="Option 4"
+                android:text="@string/loading"
                 android:textColor="@color/black" />
 
         </LinearLayout>

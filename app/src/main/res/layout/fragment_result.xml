@@ -7,20 +7,52 @@
     android:background="@color/background">
 
     <TextView
-        android:id="@+id/result"
-        android:layout_width="206dp"
-        android:layout_height="69dp"
+        android:id="@+id/retake"
+        android:layout_width="134dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_corner_button"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="Retake"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915" />
+
+    <TextView
+        android:id="@+id/retake"
+        android:layout_width="282dp"
+        android:layout_height="96dp"
         android:background="@drawable/round_corner_button"
         android:backgroundTint="#f7d8ba"
         android:gravity="center"
-        android:text="TextView"
+        android:text="Result"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="212dp"
+        android:layout_height="149dp"
+        android:background="@drawable/round_corner_button"
+        android:backgroundTint="#FFE7C7"
+        android:gravity="center"
+        android:text="This is a sample description of the your persaonlity"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.716" />
 </androidx.constraintlayout.widget.ConstraintLayout>
