@@ -57,6 +57,7 @@ To set up the project in Android Studio:
 <p>
   <a>
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/27321883-2acf-4956-b788-eb972a162c13" width="50" height="50"/>
+    <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/87c6d204-d7a6-4f8f-b3aa-7bbb9960d699" width="50" height="50"/>
   </a>
 </p>
   <br />
