@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import com.seedlings.omnipersona.R
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
@@ -28,9 +29,12 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
     }
 
     fun initStartTestButton() {
-        requireView().findViewById<Button>(R.id.button3).setOnClickListener {
+        requireView().findViewById<Button>(R.id.start_button).setOnClickListener {
             // Transition to next page code
-
+            parentFragmentManager.commit {
+                replace(R.id.frameLayout, QuestionsFragment())
+                addToBackStack(null)
+            }
         }
     }
 
