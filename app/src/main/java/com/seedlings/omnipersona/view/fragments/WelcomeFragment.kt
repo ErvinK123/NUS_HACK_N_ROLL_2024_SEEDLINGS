@@ -28,7 +28,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
     }
 
     fun initStartTestButton() {
-        requireView().findViewById<Button>(R.id.button3).setOnClickListener {
+        requireView().findViewById<Button>(R.id.start_button).setOnClickListener {
             // Transition to next page code
 
         }
