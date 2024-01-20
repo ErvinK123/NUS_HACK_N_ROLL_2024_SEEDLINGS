@@ -98,22 +98,22 @@ interactive layer to the experience but also utilizes advanced machine learning 
         </thead>
         <tbody>
             <tr>
-                <td><a href='https://github.com/ErvinK123' title='weikangg'> <img src='https://github.com/ErvinK123.png' height='50' width='50'/></a></td>
+                <td><a href='https://github.com/ErvinK123' title='Ervin'> <img src='https://github.com/ErvinK123.png' height='50' width='50'/></a></td>
                 <td>Ervin Kin</td>
                 <td>National University Of Singapore (NUS)</td>
             </tr>
             <tr>
-                <td><a href='https://github.com/ee-suan' title='kanetan4'> <img src='https://github.com/ee-suan.png' height='50' width='50'/></a></td>
+                <td><a href='https://github.com/ee-suan' title='Ee'> <img src='https://github.com/ee-suan.png' height='50' width='50'/></a></td>
                 <td>Ee Suan</td>
                 <td>National University Of Singapore (NUS)</td>
             </tr>
             <tr>
-                <td><a href='https://github.com/24Donovan24' title='john'> <img src='https://github.com/24Donovan24.png' height='50' width='50'/></a></td>
+                <td><a href='https://github.com/24Donovan24' title='Donovan'> <img src='https://github.com/24Donovan24.png' height='50' width='50'/></a></td>
                 <td>Donovan Lee</td>
                 <td>National University Of Singapore (NUS)</td>
             </tr>
             <tr>
-                <td><a href='https://github.com/weikangg' title='ken'> <img src='https://github.com/weikangg.png' height='50' width='50'/></a></td>
+                <td><a href='https://github.com/weikangg' title='Wei'> <img src='https://github.com/weikangg.png' height='50' width='50'/></a></td>
                 <td>Wei Kang</td>
                 <td>Nanyang Technological University (NTU)</td>
             </tr>
