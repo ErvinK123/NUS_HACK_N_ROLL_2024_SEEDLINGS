@@ -25,7 +25,7 @@
             android:background="@drawable/round_corner_button"
             android:backgroundTint="@color/header"
             android:gravity="center"
-            android:text="Photo captured"
+            android:text="Photo Captured"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
