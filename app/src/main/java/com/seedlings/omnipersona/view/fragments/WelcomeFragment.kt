@@ -37,16 +37,8 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        VolleyUtil.getQuestion(1, {viewModel.questionOnePayload = it
-                                  System.out.println("FUNCTION RETURNED")}, {System.out.println("API ERROR")} )
-        VolleyUtil.getQuestion(2, {viewModel.questionTwoPayload = it
-            System.out.println("FUNCTION RETURNED")}, {System.out.println("API ERROR")})
-        VolleyUtil.getQuestion(3, {viewModel.questionThreePayload = it
-                System.out.println("FUNCTION RETURNED")}, {System.out.println("API ERROR")})
-
         if (checkPermission()) {
             // Permission is already granted, perform your actions here
-
             initStartTestButton()
         } else {
             // Permission is not granted, request it
@@ -110,8 +102,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             // Transition to next page code
             System.out.println("I PRESSED START TEST")
             parentFragmentManager.commit {
-                replace(R.id.frameLayout, QuestionsFragment(1))
-                addToBackStack(null)
+                replace(R.id.frameLayout, QuestionsFragment(listOf(0, 0, 0, 0, 0, 0).toMutableList(),1))
             }
         }
     }

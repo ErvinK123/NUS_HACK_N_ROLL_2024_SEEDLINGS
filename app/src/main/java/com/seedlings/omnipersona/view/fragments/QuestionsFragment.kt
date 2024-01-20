@@ -15,13 +15,15 @@ import com.seedlings.omnipersona.storage.ApplicationViewModel
 import com.seedlings.omnipersona.utils.VolleyUtil
 
 
-class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions) {
+class QuestionsFragment(val scores: MutableList<Int>, val counter: Int) : Fragment(R.layout.fragment_questions) {
 
     private val questionCounter = counter
-
+    private val curScore = scores
     private val viewModel: ApplicationViewModel by viewModels()
     private var dataArray: List<String>? = null
     private var selectedOptionScore: String? = null // this is a 6 digit string
+
+    var payload: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,27 +32,23 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // HTTP request to endpoint
-        var payload: String =  viewModel.getQuestion(questionCounter)
-        System.out.println(questionCounter)
-        System.out.println(payload.isEmpty())
+
+
+
         this.dataArray = payload.split("@")
 
-//        VolleyUtil.getQuestion(questionCounter, {
-//            payload = it
-//            this.dataArray = payload.split("@")
-//            initButtonOne(dataArray)
-//            initButtonTwo(dataArray)
-//            initButtonThree(dataArray)
-//            initButtonFour(dataArray)},{})
+        VolleyUtil.getQuestion(questionCounter, {
+            payload = it
+            this.dataArray = payload.split("@")
+            var questionText = requireView().findViewById<TextView>(R.id.question)
+            questionText.setText(dataArray?.get(0))
+            initButtonOne(dataArray)
+            initButtonTwo(dataArray)
+            initButtonThree(dataArray)
+            initButtonFour(dataArray)
+            initNextButton()},{})
 
-        // populate texts of qn and buttons
-        var questionText = requireView().findViewById<TextView>(R.id.question)
-        questionText.setText(dataArray?.get(0))
-        initButtonOne(dataArray)
-        initButtonTwo(dataArray)
-        initButtonThree(dataArray)
-        initButtonFour(dataArray)
-        initNextButton()
+
     }
 
     private fun setButtonChosenColor(button: Button) {
@@ -81,7 +79,6 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
         buttonOne.setOnClickListener {
             setButtonChosenColor(buttonOne)
             selectedOptionScore = dataArray?.get(1)
-            System.out.println(selectedOptionScore)
         }
     }
 
@@ -118,19 +115,27 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
                     .show()
                 return@setOnClickListener
             }
-            val scoresToAdd = selectedOptionScore!!.toCharArray()
-            for (s in scoresToAdd) {
-                s.toInt()
-            }
+            val scoresToAdd = selectedOptionScore!!.toCharArray().map { x -> x.digitToInt() }
+            val scores = updateScores(scoresToAdd)
+            println("scores to add: $scoresToAdd")
+            println("scores now: $scores")
             parentFragmentManager.commit {
-                if (questionCounter > 3) {
+                if (questionCounter > 2) {
                     System.out.println("I CHANGED TO CAMERA ")
                     replace(R.id.frameLayout, CameraFragment())
-                    addToBackStack(null)
                     return@commit
                 }
-                replace(R.id.frameLayout, QuestionsFragment(questionCounter + 1))
-                addToBackStack(null)
+                replace(R.id.frameLayout, QuestionsFragment(curScore, questionCounter + 1))
+            }
+        }
+    }
+
+    private fun updateScores(scoresToAdd: List<Int>) {
+        curScore.apply {
+            for (i in indices) {
+                println("Before adding " + this[i])
+                this[i] += scoresToAdd[i]
+                println("After adding " + this[i])
             }
         }
     }

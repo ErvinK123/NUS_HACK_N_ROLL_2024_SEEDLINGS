@@ -12,6 +12,7 @@ import androidx.fragment.app.commit
 import com.seedlings.omnipersona.storage.ApplicationViewModel
 import com.seedlings.omnipersona.utils.VolleyUtil
 import com.seedlings.omnipersona.view.fragments.CameraFragment
+import com.seedlings.omnipersona.view.fragments.ResultFragment
 import com.seedlings.omnipersona.view.fragments.WelcomeFragment
 
 
