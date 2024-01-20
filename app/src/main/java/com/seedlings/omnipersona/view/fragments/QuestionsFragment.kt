@@ -116,9 +116,9 @@ class QuestionsFragment(val scores: MutableList<Int>, val counter: Int) : Fragme
                 return@setOnClickListener
             }
             val scoresToAdd = selectedOptionScore!!.toCharArray().map { x -> x.digitToInt() }
-            val scores = updateScores(scoresToAdd)
+            updateScores(scoresToAdd)
             println("scores to add: $scoresToAdd")
-            println("scores now: $scores")
+            println("scores now: $curScore")
             parentFragmentManager.commit {
                 if (questionCounter > 2) {
                     System.out.println("I CHANGED TO CAMERA ")
