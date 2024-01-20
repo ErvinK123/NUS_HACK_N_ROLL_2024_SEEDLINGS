@@ -52,7 +52,6 @@ class ResultFragment(private val curScore: MutableList<Int>) : Fragment(R.layout
             "Disciplined, competitive, and driven to excel in physical activities. Enjoys challenges and values teamwork.",
             "Wise, contemplative, and possesses a deep understanding of life's complexities. Seeks knowledge for profound insights and is often consulted for guidance."
         )
->>>>>>> c5bc2d581cf52f1e4c74358f0170ecf5ddedda40
         val maxIndex = curScore.indexOf(curScore.maxOrNull())
         val personality = table[maxIndex]
         val image = images[maxIndex]
