@@ -11,7 +11,6 @@ import com.seedlings.omnipersona.storage.ApplicationViewModel
 
 object  VolleyUtil {
     private const val appscriptApi = "https://script.google.com/macros/s/AKfycbzI_FU_Q7oKd2Kbvt6PW5v7agzL7f3ye3BKEPKp4TO42vAhFsqgRn8V9K2MBmJslYW-/exec"
-
     private lateinit var queue: RequestQueue
     private lateinit var viewModel: ApplicationViewModel
 
