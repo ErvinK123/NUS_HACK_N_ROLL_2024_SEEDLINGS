@@ -15,10 +15,10 @@ import com.seedlings.omnipersona.storage.ApplicationViewModel
 import com.seedlings.omnipersona.utils.VolleyUtil
 
 
-class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions) {
+class QuestionsFragment(val scores: MutableList<Int>, val counter: Int) : Fragment(R.layout.fragment_questions) {
 
     private val questionCounter = counter
-
+    private val curScore = scores
     private val viewModel: ApplicationViewModel by viewModels()
     private var dataArray: List<String>? = null
     private var selectedOptionScore: String? = null // this is a 6 digit string
@@ -57,7 +57,6 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
         buttonOne.setOnClickListener {
             setButtonTextColor(buttonOne, R.color.teal_select)
             selectedOptionScore = dataArray?.get(1)
-            System.out.println(selectedOptionScore)
         }
     }
 
@@ -106,19 +105,29 @@ class QuestionsFragment(val counter: Int) : Fragment(R.layout.fragment_questions
                     .show()
                 return@setOnClickListener
             }
-            val scoresToAdd = selectedOptionScore!!.toCharArray()
-            for (s in scoresToAdd) {
-                s.toInt()
-            }
+            val scoresToAdd = selectedOptionScore!!.toCharArray().map { x -> x.digitToInt() }
+            val scores = updateScores(scoresToAdd)
+            println("scores to add: $scoresToAdd")
+            println("scores now: $scores")
             parentFragmentManager.commit {
-                if (questionCounter > 3) {
+                if (questionCounter > 2) {
                     System.out.println("I CHANGED TO CAMERA ")
                     replace(R.id.frameLayout, CameraFragment())
                     addToBackStack(null)
                     return@commit
                 }
-                replace(R.id.frameLayout, QuestionsFragment(questionCounter + 1))
+                replace(R.id.frameLayout, QuestionsFragment(curScore, questionCounter + 1))
                 addToBackStack(null)
+            }
+        }
+    }
+
+    private fun updateScores(scoresToAdd: List<Int>) {
+        curScore.apply {
+            for (i in indices) {
+                println("Before adding " + this[i])
+                this[i] += scoresToAdd[i]
+                println("After adding " + this[i])
             }
         }
     }

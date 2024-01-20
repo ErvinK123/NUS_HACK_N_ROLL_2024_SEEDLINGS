@@ -82,7 +82,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             // Transition to next page code
             System.out.println("I PRESSED START TEST")
             parentFragmentManager.commit {
-                replace(R.id.frameLayout, QuestionsFragment(1))
+                replace(R.id.frameLayout, QuestionsFragment(listOf(0, 0, 0, 0, 0, 0).toMutableList(),1))
                 addToBackStack(null)
             }
         }

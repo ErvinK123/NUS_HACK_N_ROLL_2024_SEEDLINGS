@@ -2,19 +2,14 @@ package com.seedlings.omnipersona.storage
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
 
 
 class ApplicationViewModel(application: Application) : AndroidViewModel(application) {
 
-    private var scores: List<Int> = ArrayList<Int>()
+    private var scores: MutableList<Int> = listOf(0, 0, 0, 0, 0, 0).toMutableList()
+
+
 
     // Method to update the list data
-    fun updateScores(scoresToAdd: List<Int>) {
-        var i = 0
-        scores.toMutableList().apply {
-            this[0] = scores[0] + scoresToAdd[i++]
-        }
-    }
 
 }
