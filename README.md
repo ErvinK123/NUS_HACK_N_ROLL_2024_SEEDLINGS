@@ -27,38 +27,33 @@ Ensure you have the following installed:
 
 To set up the project in Android Studio:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS.git
-   ```
-2. Open Android Studio and select 'Open an Existing Project'.
-3. Navigate to the cloned repository and open it.
-4. Let Android Studio install any required dependencies.
+1. Download our release from our github repository here.
+2. Use either an Android Phone or an Android Tablet to download the apk and run the application.
+3. Enjoy!
 
 <h2 align="center" id = "key-features"> :old_key: Key Features</h2>
 
-- **Engaging Personality Test:** Unique questions designed to uncover users' personality types. <br/>
+- **Engaging Personality Test:** The heart of OmniPersona, this feature involves a set of 10 unique and imaginative questions, each carefully crafted to uncover the nuanced aspects of users' personalities. The questions are designed to be thought-provoking, encouraging users to reflect deeply on their preferences, behaviors, and life choices. <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/a3818c59-bc96-4a01-98b4-8231df840ae3" alt="Register" width="200" />
 </div>
 
-- **Multisensory Experience:** A rich blend of visual elements that deeply engages users and allows us to classify and increase the personalization of the test through images.  <br/>
+- **Multisensory Experience:** OmniPersona is not just a test but an immersive experience. It integrates rich visual elements and captivating audio to create a multisensory journey. This approach elevates the standard personality test into an engaging and interactive exploration of the self. <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/e2bba7ed-5468-4a24-853f-63b9e6e4c756" alt="Register" width="200" />
 </div>
 
-- **Dynamic Result Mapping:** An innovative scoring system that categorizes users into distinct personality types based on their responses.  <br/>
+- **Dynamic Result Mapping:** After users complete the test, OmniPersona utilizes an innovative scoring system to categorize them into one of six distinct personality archetypes: The Trailblazer, The Peacemaker, The Analyst, The Free Spirit, The Athlete, and The Sage. This system ensures a nuanced and accurate representation of each user's personality. <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/d018edf9-72f2-4a4b-8fce-462c5e580fe3" alt="Register" width="200" />
 </div>
 
-- **Interactive UI/UX:** A responsive and intuitive interface optimized for a seamless Android experience.  <br/>
+- **Interactive UI/UX:** The app boasts a responsive and intuitive user interface, optimized for a seamless and enjoyable experience on Android devices. Every aspect of the UI/UX is designed with the user in mind, ensuring ease of use and accessibility. <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/5bad66d9-5250-4287-bc3a-38e4a9374939" alt="Register" width="200" />
 </div>
 
-- **Photo Analysis Enhancement:** Leveraging Google's ML Kit, the app allows users to take photos, which are then analyzed to provide deeper insights into their personality. This feature not only adds an 
-interactive layer to the experience but also utilizes advanced machine learning techniques to refine personality categorization based on visual cues.  <br/>
+- **Photo Analysis Enhancement with Google ML Kit:** In this innovative feature, users take a photo of their surroundings after answering the questions. The app then uses Google's ML Kit to recognize objects in the photo, providing an additional layer of analysis. This technology helps refine the personality categorization by incorporating environmental factors and personal preferences indicated by the user's immediate surroundings. It's a step towards a more holistic understanding of the user, blending their answers with visual cues from their life. <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/1533e003-8dbd-4347-8a17-b29ce7e4863e" alt="Register" width="200" />
 </div>
