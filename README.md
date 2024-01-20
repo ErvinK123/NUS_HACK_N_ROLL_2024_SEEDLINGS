@@ -64,6 +64,7 @@ interactive layer to the experience but also utilizes advanced machine learning 
 </div>
 
 <h2 align="center" id = "faq" > :question: FAQ</h2>
+
 *Frequently asked questions will be added as they arise*.
 
 <h2 align="center" id = "tech-stack"> 🛠 Tech Stack:</h2>
