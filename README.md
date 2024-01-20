@@ -1,2 +1,111 @@
-# NUS_HACK_N_ROLL_2024_SEEDLINGS
-NUS HACK AND ROLL 2024 Seedlings 
+<h1 align="center"> :information_desk_person: OmniPersona</h1>
+
+<p align="center">
+  <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/b0abc5c1-ed74-4417-8525-e0f1e8223f5b" alt="Logo"/>
+</p>
+
+<h2 align = "center"> :moneybag: Value Proposition </h2>
+
+OmniPersona offers a unique, multisensory journey of self-discovery, going beyond conventional personality tests. This dynamic app combines visuals, sounds, and interactivity to unveil the vibrant tapestry of your unique personality. Users engage in a series of imaginative questions, revealing insights into their character and aligning with one of six distinct personality types: The Trailblazer, The Peacemaker, The Analyst, The Free Spirit, The Athlete, and The Sage.
+
+<h2 align = "center"> :open_book: Table Of Contents </h2>
+
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Key Features](#key-features)
+- [FAQ](#faq)
+- [Tech Stack](#tech-stack)
+- [Contributors](#contributors)
+
+<h2 align="center" id = "prerequisites"> :axe: Prerequisites</h2>
+
+Ensure you have the following installed:
+- Android Studio (latest version)
+- JDK (Java Development Kit)
+
+<h2 align="center" id = "setup"> :hammer_and_wrench: Setup</h2>
+
+To set up the project in Android Studio:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository/OmniPersona.git
+   ```
+2. Open Android Studio and select 'Open an Existing Project'.
+3. Navigate to the cloned repository and open it.
+4. Let Android Studio install any required dependencies.
+
+<h2 align="center" id = "key-features"> :old_key: Key Features</h2>
+
+- **Engaging Personality Test:** Unique questions that reveal users' personality types. <br/>
+- **Multisensory Experience:** Integration of audio and visual elements to enhance user interaction.
+- **Dynamic Result Mapping:** Innovative scoring system categorizing users into distinct personality types.
+- **User Authentication:** Secure registration and login, implemented with Android's security best practices.
+- **Interactive UI/UX:** A responsive and intuitive interface tailored for a seamless Android experience.
+
+<h2 align="center" id = "faq" > :question: FAQ</h2>
+Frequently asked questions will be added as they arise.
+
+<h2 align="center" id = "tech-stack"> 🛠 Tech Stack:</h2>
+<div align="center">
+  <h3>Android Development</h3>
+  <p>
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=androidstudio,java,kotlin" />
+    </a>
+  </p>
+  <h3>Backend</h3>
+  <p>
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=firebase" />
+    </a>
+  </p>
+  <br />
+</div>
+
+<h2 align="center" id = "contributors"> :family_man_man_boy_boy: Contributors:</h2>
+
+<div align="center">
+    <table>
+        <thead>
+            <tr>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>School</th>
+                <th>Responsibilities</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href='https://github.com/weikangg' title='weikangg'> <img src='https://github.com/weikangg.png' height='50' width='50'/></a></td>
+                <td>Wei Kang</td>
+                <td>Nanyang Technological University (NTU)</td>
+                <td>Frontend, Backend</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/kanetan4' title='kanetan4'> <img src='https://github.com/kanetan4.png' height='50' width='50'/></a></td>
+                <td>Kane Tan</td>
+                <td>Nanyang Technological University (NTU)</td>
+                <td>Frontend, Backend</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/yuandjom' title='john'> <img src='https://github.com/yuandjom.png' height='50' width='50'/></a></td>
+                <td>John Lim</td>
+                <td>Nanyang Technological University (NTU)</td>
+                <td>Frontend, Backend</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/kenfyxx' title='ken'> <img src='https://github.com/kenfyxx.png' height='50' width='50'/></a></td>
+                <td>Ken Fong</td>
+                <td>Nanyang Technological University (NTU)</td>
+                <td>Frontend, Backend</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/soqoro' title='kane'> <img src='https://github.com/soqoro.png' height='50' width='50'/></a></td>
+                <td>Sua Qi Rong</td>
+                <td>Nanyang Technological University (NTU)</td>
+                <td>Frontend, Backend</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
