@@ -44,10 +44,20 @@ class ResultFragment(private val curScore: MutableList<Int>) : Fragment(R.layout
     fun getResult(): String {
         val table = arrayOf("The Trailblazer", "The Peacemaker", "The Analyst", "The Free Spirit", "The Athlete", "The Sage")
         val images = arrayOf("trailblazer.jpg", "peacemaker.jpg", "analyst.jpg", "freespirit.jpg", "athlete.jpg", "sage.jpg")
+        val descriptions = arrayOf(
+            "Spontaneous, thrill-seeker, energetic, and enthusiastic about new experiences. Thrives on challenging the status quo and sparking transformative shifts.",
+            "Compassionate, caring, and always looking out for the well-being of others. Adept at resolving conflicts and fostering harmonious relationships.",
+            "Logical, objective, and methodical in problem-solving and decision-making. Focused on strategic thinking.",
+            "The path less travelled. Independent, unconventional, and resistant to conformity.",
+            "Disciplined, competitive, and driven to excel in physical activities. Enjoys challenges and values teamwork.",
+            "Wise, contemplative, and possesses a deep understanding of life's complexities. Seeks knowledge for profound insights and is often consulted for guidance."
+        )
         val maxIndex = curScore.indexOf(curScore.maxOrNull())
         val personality = table[maxIndex]
         val image = images[maxIndex]
+        val description = descriptions[maxIndex]
         requireView().findViewById<TextView>(R.id.result).setText(personality)
+        requireView().findViewById<TextView>(R.id.description).setText(description)
         val imageView = requireView().findViewById<ImageView>(R.id.resultImage)
         val bitmap = BitmapFactory.decodeFile("app/src/main/res/drawable/trailblazer.jpg")
         imageView.setImageBitmap(bitmap)
