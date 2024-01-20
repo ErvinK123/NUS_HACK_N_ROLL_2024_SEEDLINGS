@@ -52,6 +52,7 @@ dependencies {
 
     // Glide
     implementation ("com.github.bumptech.glide:glide:4.15.1")
+    implementation("com.google.android.gms:play-services-tasks:18.1.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.13.2")
 
     testImplementation("junit:junit:4.13.2")

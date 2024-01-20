@@ -123,29 +123,29 @@ public class CameraFragment extends Fragment {
             InputImage inputImage = InputImage.fromBitmap(rotatedBitmap, 0);
             ImageLabeler labeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
 
-            labeler.process(inputImage)
-                    .addOnSuccessListener(new OnSuccessListener<List<ImageLabel>>() {
-                        @Override
-                        public void onSuccess(List<ImageLabel> labels) {
-                            // Task completed successfully
-                            // ...
-                            Toast.makeText(requireContext(), "DONE CORRECTLY", Toast.LENGTH_SHORT).show();
-                            for (ImageLabel label : labels) {
-                                String text = label.getText();
-                                float confidence = label.getConfidence();
-                                int index = label.getIndex();
-                                System.out.println("FOUND ITEM" + text + confidence + index);
-                            }
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            // Task failed with an exception
-                            // ...
-                            Toast.makeText(requireContext(), "ON FAILURE", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+//            labeler.process(inputImage)
+//                    .addOnSuccessListener(new OnSuccessListener<List<ImageLabel>>() {
+//                        @Override
+//                        public void onSuccess(List<ImageLabel> labels) {
+//                            // Task completed successfully
+//                            // ...
+//                            Toast.makeText(requireContext(), "DONE CORRECTLY", Toast.LENGTH_SHORT).show();
+//                            for (ImageLabel label : labels) {
+//                                String text = label.getText();
+//                                float confidence = label.getConfidence();
+//                                int index = label.getIndex();
+//                                System.out.println("FOUND ITEM" + text + confidence + index);
+//                            }
+//                        }
+//                    })
+//                    .addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception e) {
+//                            // Task failed with an exception
+//                            // ...
+//                            Toast.makeText(requireContext(), "ON FAILURE", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
 
             getParentFragmentManager().beginTransaction()
                     .replace(R.id.frameLayout, new CameraResultFragment(curScore, rotatedBitmap))

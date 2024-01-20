@@ -6,25 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <Button
-        android:id="@+id/retake"
-        android:layout_width="110dp"
-        android:layout_height="46dp"
-        android:background="@drawable/round_corner_button"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="Retake"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
-
     <TextView
-        android:id="@+id/retake"
+        android:id="@+id/result"
         android:layout_width="282dp"
         android:layout_height="96dp"
         android:background="@drawable/round_corner_button"
@@ -55,4 +38,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.716" />
+
+    <Button
+        android:id="@+id/retakeButton"
+        android:layout_width="110dp"
+        android:layout_height="46dp"
+        android:background="@drawable/round_corner_button"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text=" Retake Test"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915" />
+
+    <ImageView
+        android:id="@+id/resultImage"
+        android:layout_width="262dp"
+        android:layout_height="267dp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="201dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
