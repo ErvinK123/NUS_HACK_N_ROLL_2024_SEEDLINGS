@@ -37,24 +37,24 @@ To set up the project in Android Studio:
 
 <h2 align="center" id = "key-features"> :old_key: Key Features</h2>
 
-- **Engaging Personality Test:** Unique questions designed to uncover users' personality types.
+- **Engaging Personality Test:** Unique questions designed to uncover users' personality types. <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/a3818c59-bc96-4a01-98b4-8231df840ae3" alt="Register" width="200" />
 </div>
-- **Multisensory Experience:** A rich blend of visual elements that deeply engages users and allows us to classify and increase the personalization of the test through images.
+- **Multisensory Experience:** A rich blend of visual elements that deeply engages users and allows us to classify and increase the personalization of the test through images.  <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/e2bba7ed-5468-4a24-853f-63b9e6e4c756" alt="Register" width="200" />
 </div>
-- **Dynamic Result Mapping:** An innovative scoring system that categorizes users into distinct personality types based on their responses.
+- **Dynamic Result Mapping:** An innovative scoring system that categorizes users into distinct personality types based on their responses.  <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/d018edf9-72f2-4a4b-8fce-462c5e580fe3" alt="Register" width="200" />
 </div>
-- **Interactive UI/UX:** A responsive and intuitive interface optimized for a seamless Android experience.
+- **Interactive UI/UX:** A responsive and intuitive interface optimized for a seamless Android experience.  <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/5bad66d9-5250-4287-bc3a-38e4a9374939" alt="Register" width="200" />
 </div>
 - **Photo Analysis Enhancement:** Leveraging Google's ML Kit, the app allows users to take photos, which are then analyzed to provide deeper insights into their personality. This feature not only adds an 
-interactive layer to the experience but also utilizes advanced machine learning techniques to refine personality categorization based on visual cues.
+interactive layer to the experience but also utilizes advanced machine learning techniques to refine personality categorization based on visual cues.  <br/>
 <div align="center">
     <img src="https://github.com/ErvinK123/NUS_HACK_N_ROLL_2024_SEEDLINGS/assets/95838788/1533e003-8dbd-4347-8a17-b29ce7e4863e" alt="Register" width="200" />
 </div>
