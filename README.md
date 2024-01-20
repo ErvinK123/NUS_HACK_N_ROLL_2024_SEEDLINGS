@@ -56,9 +56,10 @@ Frequently asked questions will be added as they arise.
   </p>
   <h3>Backend</h3>
   <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=firebase" />
+    <a>
+      <img src="https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white"/>
     </a>
+    	
   </p>
   <br />
 </div>
@@ -72,39 +73,28 @@ Frequently asked questions will be added as they arise.
                 <th>Profile</th>
                 <th>Name</th>
                 <th>School</th>
-                <th>Responsibilities</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><a href='https://github.com/weikangg' title='weikangg'> <img src='https://github.com/weikangg.png' height='50' width='50'/></a></td>
+                <td><a href='https://github.com/ErvinK123' title='weikangg'> <img src='https://github.com/weikangg.png' height='50' width='50'/></a></td>
+                <td>Ervin Kin</td>
+                <td>National University Of Singapore (NUS)</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/ee-suan' title='kanetan4'> <img src='https://github.com/kanetan4.png' height='50' width='50'/></a></td>
+                <td>Ee Suan</td>
+                <td>National University Of Singapore (NUS)</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/24Donovan24' title='john'> <img src='https://github.com/yuandjom.png' height='50' width='50'/></a></td>
+                <td>Donovan Lee</td>
+                <td>National University Of Singapore (NUS)</td>
+            </tr>
+            <tr>
+                <td><a href='https://github.com/weikangg' title='ken'> <img src='https://github.com/kenfyxx.png' height='50' width='50'/></a></td>
                 <td>Wei Kang</td>
                 <td>Nanyang Technological University (NTU)</td>
-                <td>Frontend, Backend</td>
-            </tr>
-            <tr>
-                <td><a href='https://github.com/kanetan4' title='kanetan4'> <img src='https://github.com/kanetan4.png' height='50' width='50'/></a></td>
-                <td>Kane Tan</td>
-                <td>Nanyang Technological University (NTU)</td>
-                <td>Frontend, Backend</td>
-            </tr>
-            <tr>
-                <td><a href='https://github.com/yuandjom' title='john'> <img src='https://github.com/yuandjom.png' height='50' width='50'/></a></td>
-                <td>John Lim</td>
-                <td>Nanyang Technological University (NTU)</td>
-                <td>Frontend, Backend</td>
-            </tr>
-            <tr>
-                <td><a href='https://github.com/kenfyxx' title='ken'> <img src='https://github.com/kenfyxx.png' height='50' width='50'/></a></td>
-                <td>Ken Fong</td>
-                <td>Nanyang Technological University (NTU)</td>
-                <td>Frontend, Backend</td>
-            </tr>
-            <tr>
-                <td><a href='https://github.com/soqoro' title='kane'> <img src='https://github.com/soqoro.png' height='50' width='50'/></a></td>
-                <td>Sua Qi Rong</td>
-                <td>Nanyang Technological University (NTU)</td>
-                <td>Frontend, Backend</td>
             </tr>
         </tbody>
     </table>
