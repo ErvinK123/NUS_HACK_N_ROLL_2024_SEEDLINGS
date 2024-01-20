@@ -52,6 +52,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CameraFragment extends Fragment {
+    private List<Integer> curScore;
+
+    public CameraFragment(List<Integer> curScore) {
+        this.curScore = curScore;
+    }
 
     // MISC Fields
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -143,7 +148,7 @@ public class CameraFragment extends Fragment {
                     });
 
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayout, new CameraResultFragment(rotatedBitmap))
+                    .replace(R.id.frameLayout, new CameraResultFragment(curScore, rotatedBitmap))
                     .commit();
 
         }

@@ -7,9 +7,10 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import com.google.android.material.color.utilities.Score
 import com.seedlings.omnipersona.R
 
-class CameraResultFragment(private val bitmap: Bitmap): Fragment(R.layout.fragment_camera_result){
+class CameraResultFragment(private val curScore: MutableList<Int>, private val bitmap: Bitmap): Fragment(R.layout.fragment_camera_result){
 
     private lateinit var imageView: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class CameraResultFragment(private val bitmap: Bitmap): Fragment(R.layout.fragme
 
         requireView().findViewById<Button>(R.id.photoNext).setOnClickListener {
             parentFragmentManager.commit{
-                replace(R.id.frameLayout, ResultFragment())
+                replace(R.id.frameLayout, ResultFragment(curScore))
             }
         }
     }
